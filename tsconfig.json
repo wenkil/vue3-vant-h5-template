@@ -1,38 +1,11 @@
 {
   "compilerOptions": {
-    "types": ["node"],
-    "target": "esnext",
-    "module": "esnext",
-    "strict": false,
-    "jsx": "preserve",
-    "importHelpers": true,
+    "module": "ES2020",
+    "lib": ["es2020", "dom"],
     "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-, "vant.ts"  ],
-  "exclude": [
-    "node_modules"
-  ]
+      "@/*": ["src/*"]
+    }
+  }
 }

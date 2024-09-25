@@ -1,31 +1,35 @@
 <template>
-  <div class="home">
-    <h3>首页</h3>
-    <van-button type="primary" @click="goToLogin" size="small">登录页</van-button>
-    <van-button type="primary" @click="goToSession" size="small">Session测试页</van-button>
-  </div>
+	<div class="home">
+		<h3>{{ $t("home") }}</h3>
+		<van-button type="primary" @click="goToLogin" size="small">{{
+			$t("login")
+		}}</van-button>
+		<van-button type="primary" @click="goToSession" size="small">{{
+			$t("session_test")
+		}}</van-button>
+	</div>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router"
 
-const router = useRouter();
+const router = useRouter()
 
 const goToLogin = () => {
-  router.push('/login');
-};
+	router.push("/login")
+}
 
 const goToSession = () => {
-  router.push('/session');
-};
+	router.push("/session")
+}
 </script>
 
 <style lang="less" scoped>
 .home {
-  padding: 20px;
+	padding: 20px;
 }
 
 .van-button {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 </style>
