@@ -3,5 +3,6 @@ module.exports = {
 	semi: false, // 代码行末尾是否加分号。
 	trailingComma: "none", // 不添加尾随逗号。
 	htmlWhitespaceSensitivity: "strict", // 对 HTML 空格敏感，严格遵守 HTML 空格规则。
-	endOfLine: "auto" // 保持现有的行尾符号（CRLF 或 LF），自动识别文件中的行尾符号。
+	endOfLine: "auto", // 保持现有的行尾符号（CRLF 或 LF），自动识别文件中的行尾符号。
+	singleAttributePerLine: false // 单个属性独占一行
 }
