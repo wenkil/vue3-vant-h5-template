@@ -8,6 +8,7 @@ import AutoImport from "unplugin-auto-import/vite"
 import { visualizer } from "rollup-plugin-visualizer"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
 import eslintPlugin from "vite-plugin-eslint"
+import { createHtmlPlugin } from "vite-plugin-html"
 
 // 动态计算 rootValue
 // const designWidth = 375; // 设计稿宽度
@@ -43,7 +44,14 @@ export default defineConfig(({ mode }) => {
 			failOnError: true, // 遇到错误时阻止编译
 			emitWarning: true, // 触发警告事件
 			emitError: true // 触发错误事件
-		})
+		}),
+		createHtmlPlugin({
+			inject: {
+				data: {
+					title: env.VITE_APP_TITLE
+				}
+			}
+		}),
 	]
 
 	// 检查命令行参数中是否包含 --report
